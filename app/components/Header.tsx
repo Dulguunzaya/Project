@@ -19,7 +19,7 @@ const Header = () => {
         <Container>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto gap-5 mx-auto">
+            <Nav className="me-auto gap-5 mx-auto ">
               <Nav.Link eventKey={2} href="/">
                 Home
               </Nav.Link>
@@ -39,6 +39,9 @@ const Header = () => {
               </Nav>
               <Nav.Link href="/facts" className="font-bold">
                 Сонирхолтой баримтууд
+              </Nav.Link>
+              <Nav.Link href="/facts" className="font-bold">
+                Яагаад eSport-н тамирчин болох ёстой гэж?
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
