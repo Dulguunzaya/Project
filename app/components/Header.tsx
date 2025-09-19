@@ -11,18 +11,19 @@ const Header = () => {
   const router = useRouter();
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary gap-10">
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        className="bg-body-tertiary gap-10 bg-"
+      >
         <Container>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse
-            id="responsive-navbar-nav"
-            className="align-items-center"
-          >
-            <Nav className="me-auto gap-5 mx-auto align-items-center">
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto gap-5 mx-auto ">
               <Nav.Link eventKey={2} href="/">
                 Home
               </Nav.Link>
-              <Nav.Link href="/theory" className="font-bold ">
+              <Nav.Link href="/theory" className="font-bold">
                 FPS тоглоомын үндсэн онол
               </Nav.Link>
               <Nav.Link
@@ -34,7 +35,7 @@ const Header = () => {
                 Reaction Speed Test
               </Nav.Link>
               <Nav>
-                <Nav.Link href="/skill">Ур чадвар</Nav.Link>
+                <Nav.Link href="/skill">Ур Чадвар</Nav.Link>
               </Nav>
               <Nav.Link href="/facts" className="font-bold">
                 Сонирхолтой баримтууд
