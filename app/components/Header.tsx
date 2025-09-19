@@ -37,9 +37,6 @@ const Header = () => {
               <Nav>
                 <Nav.Link href="/skill">Ур Чадвар</Nav.Link>
               </Nav>
-              <Nav.Link href="/facts" className="font-bold">
-                Сонирхолтой баримтууд
-              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

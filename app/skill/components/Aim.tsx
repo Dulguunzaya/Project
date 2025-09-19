@@ -1,6 +1,6 @@
 import React from "react";
 import SkillCard from "./SkillCard";
-import { SkillCardProps } from "./types"; // import type
+import { SkillCardProps } from "./types";
 
 const comps: SkillCardProps[] = [
   {
@@ -70,7 +70,7 @@ const Aim = () => {
           img={item.img}
           title={item.title}
           description={item.description}
-          link={item.link} // pass the link properly
+          link={item.link}
         />
       ))}
     </div>

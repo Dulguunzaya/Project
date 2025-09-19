@@ -1,16 +1,32 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { SkillCardProps } from "./types"; // import the interface
+import React, { useState } from "react";
 
-const SkillCard = ({ img, title, description, link }: SkillCardProps) => {
+interface SkillCardProps {
+  img: string;
+  title: string;
+  description: string;
+  link: string;
+}
+
+const SkillCard: React.FC<SkillCardProps> = ({
+  img,
+  title,
+  description,
+  link,
+}) => {
+  const [loaded] = useState(false);
+
   return (
-    <div className="p-4 flex flex-col items-center text-center">
+    <div
+      className={`p-4 flex flex-col items-center text-center transform transition-all duration-700 ${
+        loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
+    >
       <Link href={link} className="block">
-        <div
-          className="relative w-[250px] aspect-[12/16] overflow-hidden rounded-lg shadow-md 
-                      transition-transform duration-300 hover:scale-105 group cursor-pointer"
-        >
+        <div className="relative w-[250px] aspect-[12/16] overflow-hidden rounded-lg shadow-md transition-transform duration-300 hover:scale-105 group cursor-pointer">
           <Image
             src={img}
             alt={title}

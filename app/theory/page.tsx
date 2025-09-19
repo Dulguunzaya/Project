@@ -2,10 +2,16 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Page = () => {
   const router = useRouter();
+  const [loaded, setLoaded] = useState(false); // track page load
+
+  useEffect(() => {
+    setLoaded(true); // trigger animation on mount
+  }, []);
+
   const texts = [
     {
       text: "FPS гэдэг нь First Person Shooting буюу хүнийг яг тэр тоглоомонд бодитоор орсон мэт мэдрэмжийг төрүүлэх зорилготой харах өнцгийг хэлнэ.",
@@ -48,7 +54,11 @@ const Page = () => {
               item.bg
             } 
             ${index % 2 === 0 ? "self-end text-right" : "self-start text-left"}
-            md:max-w-[70%] w-full`}
+            md:max-w-[70%] w-full
+            transform transition-all duration-700
+            ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
+            `}
+            style={{ transitionDelay: `${index * 150}ms` }} // stagger animation
           >
             {item.text}
           </div>
