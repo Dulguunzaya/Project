@@ -6,8 +6,9 @@ const nextConfig = {
       "bitskins.com",
       "images.steamusercontent.com",
       "i.redd.it",
-      "cs2.kinguin.net", // added
-      "img-cdn.hltv.org", // added
+      "cs2.kinguin.net",
+      "img-cdn.hltv.org",
+      "i.pinimg.com",
     ],
   },
 };
